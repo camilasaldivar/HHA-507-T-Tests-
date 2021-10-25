@@ -67,13 +67,17 @@ AfricanAmerican = diabetes[diabetes['race']=='AfricanAmerican']
 ttest_ind(Caucasian['time_in_hospital'], AfricanAmerican['time_in_hospital'])
 ####Result    statistic= -5.0610017032095325, pvalue=4.178330085585203e-07)
 
-# There is a significant difference in time in hospital between Caucasians and fAfrican Americans
+# There is a significant difference in time in hospital between Caucasians and African Americans
 ## because the p-value is less than 0.05, which allows us to reject the null hypothesis 
 
-###difference between RACE (Caucasian and African American) and  Number of lab procedures 
+###difference between RACE (Asian and African American) and  Number of lab procedures 
 
-ttest_ind(Caucasian['totalCountProcedures'], AfricanAmerican['totalCountProcedures'])
-####Result  statistic=-6.98407655628912, pvalue=2.8860334493798807e-12
+Asian = diabetes[diabetes['race']=='Asian']
+AfricanAmerican = diabetes[diabetes['race']=='AfricanAmerican']
 
-##There is a significant difference in number of lab procedures between Caucasians and fAfrican Americans
+
+ttest_ind(Asian['totalCountProcedures'], AfricanAmerican['totalCountProcedures'])
+####Result  Ttest_indResult(statistic=-3.7897663070631253, pvalue=0.00015123463923369748)
+
+##There is a significant difference in number of lab procedures between Asians and African Americans
 ## because the p-value is less than 0.05, which allows us to reject the null hypothesis 
